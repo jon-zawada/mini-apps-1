@@ -38,6 +38,7 @@ for(var i = 0; i <= 8; i++) {
     rowWinner();
     columnWinner();
     diagonalWinner();
+    console.log('gameWon:' + gameWon)
     //eventually after every play() we need to check for a winner
     //if board is full and no winner return a tie
   })
@@ -67,12 +68,13 @@ var columnWinner = function(){
 }
 
 var diagonalWinner = function(){
-  if(board[0][0] !== '' && board[1][1] !== '' && board [2][2] !== ''
-    && board[0][0] === board[1][1] && board[0][0] === board[2][2] && board[1][1] === board[2][2]
+  if((board[0][0] !== '' && board[1][1] !== '' && board [2][2] !== '' && board[0][0] === board[1][1] && board[0][0] === board[2][2] && board[1][1] === board[2][2]) || (board[2][0] !== '' && board[1][1] !== '' && board[0][2] !== '' && board[2][0] === board[1][1] && board[2][0] === board[0][2] && board[1][1] === board[0][2])
   ) {
     gameWon = true;
     alert('WE HAVE A WINNER')
   }
 }
+
+var tie = function(){}
 
 console.log('hello from app.js');
