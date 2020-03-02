@@ -35,13 +35,15 @@ for(var i = 0; i <= 8; i++) {
     // console.log(event.target.id);
     board[document.getElementById(event.target.id).parentElement.className][event.target.className] = event.target.innerHTML;
     console.log(board);
-    // rowWinner();
+    rowWinner();
     columnWinner();
+    diagonalWinner();
     //eventually after every play() we need to check for a winner
     //if board is full and no winner return a tie
   })
 }
 
+//FUNCTIONS TO CHECK FOR A WINNER AND TIE
 var rowWinner = function(){
   // console.log('hi from row winner')
   for(var i = 0; i < board.length; i++) {
@@ -63,6 +65,14 @@ var columnWinner = function(){
     }
   }
 }
-//function to check for winner
+
+var diagonalWinner = function(){
+  if(board[0][0] !== '' && board[1][1] !== '' && board [2][2] !== ''
+    && board[0][0] === board[1][1] && board[0][0] === board[2][2] && board[1][1] === board[2][2]
+  ) {
+    gameWon = true;
+    alert('WE HAVE A WINNER')
+  }
+}
 
 console.log('hello from app.js');
