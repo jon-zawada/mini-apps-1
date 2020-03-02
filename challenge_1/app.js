@@ -38,6 +38,7 @@ for(var i = 0; i <= 8; i++) {
     rowWinner();
     columnWinner();
     diagonalWinner();
+    tie();
     console.log('gameWon:' + gameWon)
     //eventually after every play() we need to check for a winner
     //if board is full and no winner return a tie
@@ -75,6 +76,19 @@ var diagonalWinner = function(){
   }
 }
 
-var tie = function(){}
+var tie = function(){
+  var count = 0;
+  for(var i = 0; i < board.length; i++) {
+    var rows = board[i];
+    for(var j = 0; j < rows.length; j++) {
+      if(board[i][j] === 'X' || board[i][j] === 'O') {
+        count++;
+      }
+    }
+  }
+  if(count === 9 && gameWon === false) {
+    alert('WE HAVE A TIE')
+  }
+}
 
-console.log('hello from app.js');
+// console.log('hello from app.js');
