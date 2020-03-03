@@ -45,7 +45,7 @@ for(var i = 0; i <= 8; i++) {
   })
 }
 
-//FUNCTIONS TO CHECK FOR A WINNER AND TIE
+///////////////////FUNCTIONS TO CHECK FOR A WINNER AND TIE////////////////////////////////
 var rowWinner = function(){
   // console.log('hi from row winner')
   for(var i = 0; i < board.length; i++) {
@@ -91,4 +91,16 @@ var tie = function(){
   }
 }
 
-// console.log('hello from app.js');
+
+
+/////////////BUTTON/////////////////
+// document.getElementById('button1').addEventListener('click', function(){
+//   gameWon = false;
+//   board = [['','',''],['','',''],['','','']]
+//   document.getElementsByTagName('td').innerHTML = '';
+//   console.log('clicked button')
+// })
+console.log('hello from app.js');
+
+
+//set adding value to null once gameWon===true
