@@ -15,7 +15,10 @@ console.log(board);
 //change playX everytime play is called
 var play = function(){
   //if not playX
-  if(!playX) {
+    if(gameWon) {
+      return '';
+    }
+    else if(!playX) {
     //change it for the next turn
     playX = true;
     return 'X'
@@ -94,12 +97,13 @@ var tie = function(){
 
 
 /////////////BUTTON/////////////////
-// document.getElementById('button1').addEventListener('click', function(){
-//   gameWon = false;
-//   board = [['','',''],['','',''],['','','']]
-//   document.getElementsByTagName('td').innerHTML = '';
-//   console.log('clicked button')
-// })
+document.getElementById('button1').addEventListener('click', function(){
+  gameWon = false;
+  playX = false;
+  board = [['','',''],['','',''],['','','']]
+  document.getElementsByTagName('td').innerHTML = '';
+  console.log('clicked button')
+})
 console.log('hello from app.js');
 
 
