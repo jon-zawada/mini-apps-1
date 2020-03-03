@@ -5,9 +5,13 @@
     <title>title</title>
   </head>
   <body>
-    <div>CSV</div>
-    <div>
-      <form method='POST' action='http://localhost:3000/upload_json'><input type='submit'></form>
+    <div align='center'>CSV Generator</div>
+    <div align='center'>
+      <form method='POST' action='http://localhost:3000/upload_json' id='form1'>
+        <input type='submit'>
+      </form>
+      <textarea form='form1' id='textarea'>Enter text here...</textarea>
     </div>
   </body>
+  <script src='app.js' type='text/javascript'></script>
 </html>
