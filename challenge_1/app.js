@@ -101,8 +101,11 @@ document.getElementById('button1').addEventListener('click', function(){
   gameWon = false;
   playX = false;
   board = [['','',''],['','',''],['','','']]
-  document.getElementsByTagName('td').innerHTML = '';
-  console.log('clicked button')
+  for(var i = 0; i < 9; i++) {
+    document.getElementById(i).innerHTML = '';
+  }
+  // document.getElementsByTagName('td').innerHTML = '';
+  console.log('clicked button');
 })
 console.log('hello from app.js');
 
