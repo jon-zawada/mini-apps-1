@@ -1,0 +1,64 @@
+#app {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.table {
+  border: 1px solid rgb(0, 102, 255);
+  width: 450px;
+  height: 450px;
+  background-color: rgb(0, 102, 255);
+}
+
+.row {
+  border: 1px solid rgb(0, 102, 255);
+  /* background-color: white; */
+}
+
+.whiteBox {
+  border: 1px solid rgb(0, 102, 255);
+  border-radius: 100%;
+  background-color: white;
+  cursor: pointer;
+}
+
+.redBox {
+  border: 1px solid rgb(0, 102, 255);
+  border-radius: 100%;
+  background-color: red;
+  cursor: pointer;
+}
+
+.yellowBox {
+  border: 1px solid rgb(0, 102, 255);
+  border-radius: 100%;
+  background-color: yellow;
+  cursor: pointer;
+}
+
+h1 {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.playerSelect {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 10px
+}
+
+.playerButtons {
+  background-color: rgb(0, 102, 255);
+  border: 1px solid black;
+  color: white;
+  padding: 10px 32px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 12px;
+}
+
+#spacing {
+  padding: 1px
+}
